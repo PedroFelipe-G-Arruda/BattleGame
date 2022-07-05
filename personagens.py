@@ -1,7 +1,10 @@
+from faker import Faker # Os dados fake para nome
 import random
+
+fake = Faker() 
   
 class Guerreiro:
-  def __init__(self, nome):
+  def __init__(self, nome = fake.first_name()):
     self.nome = nome
     self.classe = 'Guerreiro'
     self.vida = random.randint(4,6)
@@ -12,7 +15,7 @@ class Guerreiro:
     self.bag = []
 
 class Arqueiro:
-  def __init__(self, nome):
+  def __init__(self, nome = fake.first_name()):
     self.nome = nome
     self.classe = 'Arqueiro'
     self.vida = random.randint(2,4)
@@ -23,7 +26,7 @@ class Arqueiro:
     self.bag = []
 
 class Mago:
-  def __init__(self, nome):
+  def __init__(self, nome = fake.first_name()):
     self.nome = nome
     self.classe = 'Mago'
     self.vida = random.randint(1,3)
@@ -35,7 +38,7 @@ class Mago:
 
 
 class Curandeiro:
-  def __init__(self, nome):
+  def __init__(self, nome = fake.first_name()):
     self.nome = nome
     self.classe = 'O Super Senhor Curandeiro'
     self.vida = random.randint(1,2)

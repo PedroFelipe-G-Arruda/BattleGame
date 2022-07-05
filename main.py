@@ -1,8 +1,7 @@
 # Bibliotecas
 import personagens as pg # importas os personagens
-from faker import Faker # Os dados fake para nome
 from time import sleep # 
-fake = Faker() 
+
 
 # Cores
 RED   = "\033[1;31m"  
@@ -65,7 +64,7 @@ def batalha(inimigos,herois):
         print('empate')
     
 def inicio():
-    personagens = pg.Guerreiro(fake.first_name()), pg.Arqueiro(fake.first_name()), pg.Mago(fake.first_name())
+    personagens = pg.Guerreiro(), pg.Arqueiro(), pg.Mago()
     return list(personagens)
   
 inimigos = inicio()

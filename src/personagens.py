@@ -4,14 +4,14 @@ import random
 fake = Faker()
 
 class Personagem:
-  def __init__(self, nome):
+  def __init__(self, nome, classe):
     self.nome = nome
+    self.classe = classe
     self.bag = []
   
 class Guerreiro(Personagem):
   def __init__(self):
-    super().__init__(fake.first_name())
-    self.classe = 'Guerreiro'
+    super().__init__(fake.first_name(), 'Guerreiro')
     self.forca = random.randint(8,10)
     self.agilidade = random.randint(4,6)
     self.inteligencia = random.randint(0,1)
@@ -26,8 +26,7 @@ class Guerreiro(Personagem):
 
 class Arqueiro(Personagem):
   def __init__(self):
-    super().__init__(fake.first_name())
-    self.classe = 'Arqueiro'
+    super().__init__(fake.first_name(), 'Arqueiro')
     self.forca = random.randint(4,6)
     self.agilidade = random.randint(8,10)
     self.inteligencia = random.randint(0,2)
@@ -42,8 +41,7 @@ class Arqueiro(Personagem):
 
 class Mago(Personagem):
   def __init__(self):
-    super().__init__(fake.first_name())
-    self.classe = 'Mago'
+    super().__init__(fake.first_name(), 'Mago')
     self.forca = random.randint(2,4)
     self.agilidade = random.randint(2,4)
     self.inteligencia = random.randint(10,12)

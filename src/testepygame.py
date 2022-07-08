@@ -1,4 +1,3 @@
-from errno import ENOTEMPTY
 import pygame
 
 pygame.init()
@@ -13,20 +12,18 @@ bg = pygame.image.load('images/background.jpg').convert_alpha()
 bg = pygame.transform.scale(bg, (x, y))
 
 warrior = pygame.image.load('images/warrior.png').convert_alpha()
-warrior = pygame.transform.scale(warrior, (100,100))
+warrior = pygame.transform.scale(warrior, (150,150))
 warrior = pygame.transform.flip(warrior,True,False)
 
 warrior_enemy = pygame.image.load('images/warrior-en2.png').convert_alpha()
-warrior_enemy = pygame.transform.scale(warrior_enemy, (100,100))
+warrior_enemy = pygame.transform.scale(warrior_enemy, (150,150))
 
 
-pos_warrior_x = 200
-pos_warrior_y = 560
+pos_warrior_x = 250
+pos_warrior_y = 530
 
-pos_warrioren_x = 500
-pos_warrioren_y = 560
-
-
+pos_warrioren_x = 450
+pos_warrioren_y = 530
 
 rodando = True 
 
@@ -42,4 +39,3 @@ while rodando:
     screen.blit(warrior_enemy, (pos_warrioren_x, pos_warrioren_y))
 
     pygame.display.update()
-
